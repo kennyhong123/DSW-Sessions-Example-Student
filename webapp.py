@@ -29,7 +29,7 @@ def renderPage1():
 @app.route('/page2',methods=['GET','POST'])
 def renderPage2():
     #set the first and last name in the session
-    session["firstname"] = request.from["firstname"]
+    session["firstname"] = request.form["firstname"]
     session["lastname"] = request.form["lastname"]
     return render_template('page2.html')
 
